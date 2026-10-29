@@ -163,3 +163,6 @@ set(LXR_ITCM_SOURCES
 if(LXR_ITCM_OPT)
     set_source_files_properties(${LXR_ITCM_SOURCES} PROPERTIES COMPILE_OPTIONS "${LXR_ITCM_OPT}")
 endif()
+
+
+set_property(SOURCE Src/Soundengine/DSPAudio/ResonantFilter.c APPEND PROPERTY COMPILE_OPTIONS -fno-thread-jumps)
